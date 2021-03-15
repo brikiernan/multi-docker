@@ -15,7 +15,7 @@ after_success:
   - docker build -t briankiernan/multi-server ./server
   - docker build -t briankiernan/multi-worker ./worker
   #Log in to the Docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Push built images to docker hub
   - docker push briankiernan/multi-client
   - docker push briankiernan/multi-nginx
