@@ -2,7 +2,7 @@ FROM node:alpine
 
 WORKDIR /node
 
-COPY package*.json ./
+COPY ./package*.json ./
 RUN mkdir app && chown -R node:node .
 USER node
 RUN npm install
